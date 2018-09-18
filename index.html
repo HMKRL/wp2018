@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>F74046349 HW1</title>
+	<script type="text/javascript">
+		function setClock() {
+			document.getElementById('frame').setAttribute('src', 'clock.html');
+		}
+		function setAbout() {
+			document.getElementById('frame').setAttribute('src', 'about.html');
+		}
+		function setLinks() {
+			document.getElementById('frame').setAttribute('src', 'links.html');
+		}
+	</script>
+	<style media="screen">
+	@font-face {
+		font-family: "FOTMatisseProEB";
+		src: url(FOTMatisseProEB.otf);
+	}
+	body {
+		background-color: black;
+		color:#e6770b;
+		font-family: "FOTMatisseProEB";
+		height: 100vh;
+	}
+	#navigator {
+		width: 20%;
+		float: left;
+	}
+	#icon {
+		width: 100%;
+	}
+	#content {
+		width: 65%;
+		height: 100%;
+		float: right;
+	}
+	#navigator table {
+		width: 100%;
+	}
+	.button {
+		border: 2px solid #e6770b;
+		border-radius: 5px;
+		text-align: center;
+		vertical-align: middle;
+	}
+	tr:hover {
+		background-color: #25f6b2;
+		color: #000000;
+	}
+	#frame {
+		border: none;
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+	}
+	</style>
+</head>
+<body>
+	<div id="navigator">
+		<img src="icon.png" id="icon" onclick="setClock()"/>
+		<table>
+			<tr>
+				<td class="button" onclick="setAbout()">
+					關於我 ABOUT ME
+				</td>
+			</tr>
+			<tr>
+				<td class="button" onclick="setLinks()">
+					相關連結 LINKS
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="content">
+		<iframe src="clock.html" id="frame"></iframe>
+	</div>
+</body>
+</html>
