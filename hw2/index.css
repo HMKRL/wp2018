@@ -70,6 +70,10 @@ button:hover {
     top: 70vh;
 }
 
+#ad {
+    visibility: hidden;
+}
+
 .cardnumber {
     position: relative;
     top: 76%;

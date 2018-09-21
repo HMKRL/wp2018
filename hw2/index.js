@@ -1,4 +1,5 @@
 var current_card;
+
 function whichTransitionEvent(){
     var t;
     var el = document.createElement('fakeelement');
@@ -15,8 +16,11 @@ function whichTransitionEvent(){
         }
     }
 }
+
 function funcLoad() {
     document.getElementById('delete').style.visibility = 'hidden';
+    document.getElementById('ad').style.visibility = 'hidden';
+
     var cards = document.getElementsByClassName('card');
     for (let i = 0; i < cards.length; i++) {
         cards[i].onclick = function() { cardClicked(i); }
@@ -30,8 +34,16 @@ function funcLoad() {
 }
 
 function cardClicked(cardnum) {
-    document.getElementById('delete').style.visibility = 'hidden';
     var cards = document.getElementsByClassName('card');
+    if(cards[cardnum].id !== current_card) document.getElementById('delete').style.visibility = 'hidden';
+
+    // AD Zone
+    if(cards[cardnum].id === 'gogo') {
+        document.getElementById('ad').style.visibility = 'visible';
+    } else {
+        document.getElementById('ad').style.visibility = 'hidden';
+    }
+
     for (let i = cards.length - 1; i > cardnum; i--) {
         setTimeout(function(cards, i) { cards[i].style.top = 88 + i + '%'; }, 120 * (cards.length - 1 - i), cards, i)
     }
