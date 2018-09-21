@@ -1,0 +1,83 @@
+body {
+    width: 100vw;
+    background-color: #3f3f3f;
+    overflow: hidden;
+    font-family: "Noto Sans", "Noto Sans CJK TC", sans-serif;
+}
+
+.card {
+    width: 80vw;
+    height: 50vw;
+
+    max-width: 430px;
+    max-height: 270px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    font-weight: bold;
+    
+    margin: 20px;
+    position: absolute;
+    top: 150vh;
+    transition: all .4s ease-in-out;
+    
+    z-index: 1;
+}
+
+#gogo {
+    background-image: url("./cards/gogo.png");
+    color: white;
+}
+
+#koko {
+    background-image: url("./cards/koko.png");
+    color: black;
+}
+
+#linepay {
+    background-image: url("./cards/linepay.png");
+    color: black;
+}
+
+#greendog {
+    background-image: url("./cards/greendog.png");
+    color: black;
+}
+
+button {
+    width: 80vw;
+    height: 5vw; 
+    max-width: 430px;
+    color: white;
+    
+    background-color: rgba(255, 255, 255, 0);
+
+    border: 3px solid white;
+    border-radius: 12px;
+    
+    margin: 20px;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#delete {
+    visibility: hidden;
+    position: absolute;
+    top: 70vh;
+}
+
+.cardnumber {
+    position: relative;
+    top: 76%;
+    left: 5%;
+}
+
+.cardholder {
+    position: relative;
+    top: 77%;
+    left: 5%;
+}
